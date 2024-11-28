@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès sécurisé</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #password {
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        #submit {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            const correctPassword = "0380"; // Mot de passe défini
+            if (inputPassword === correctPassword) {
+                window.location.href = "https://example.com"; // URL de destination
+            } else {
+                alert("Mot de passe incorrect !");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Page sécurisée</h1>
+    <p>Entrez le mot de passe pour accéder au contenu :</p>
+    <input type="password" id="password" placeholder="Mot de passe">
+    <br>
+    <button id="submit" onclick="checkPassword()">Valider</button>
+</body>
+</html>
